@@ -1,15 +1,13 @@
-﻿/*Напишите программу, которая принимает на вход пятизначное 
-число и проверяет, является ли оно палиндромом.
+﻿/*Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-14212 -> нет
-12821 -> да
-23432 -> да
+3 -> 1, 8, 27
+5 -> 1, 8, 27, 64, 125
 */
-Console.WriteLine("Введите пятизначное число");
+
+Console.WriteLine("Введите число ");
 int num = Convert.ToInt32(Console.ReadLine());
-string str = num.ToString();
-if (str[0] == str[4] & str[1] == str[3])
+for (int i = 1; i <= num; i++)
 {
-    Console.WriteLine("Да");
-} 
-else Console.WriteLine("нет");
+    int cube = i * i * i;
+    Console.Write($"{cube}, ");
+}
